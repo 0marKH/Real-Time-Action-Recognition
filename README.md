@@ -74,7 +74,7 @@ Camera Input → AI Processing → "A person waving with a smile in a bright roo
 ### 1. Clone or Download
 
 ```bash
-cd LLM_Rec
+cd VLM_Rec
 ```
 
 ### 2. Create Virtual Environment
