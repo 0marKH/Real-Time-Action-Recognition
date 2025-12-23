@@ -3,30 +3,55 @@
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-red.svg)](https://pytorch.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
-A local, low-latency system that uses Vision-Language Models (Moondream 2 & Florence-2) to generate natural language descriptions of real-time camera footage. Features voice output, video recording with captions, and custom prompts.
+> **Transform your camera into an AI narrator that describes what it sees in real-time**
 
-![Demo](docs/demo-preview.png)
-*Real-time action recognition with live descriptions*
+A local, low-latency system that uses Vision-Language Models (Moondream 2 & Florence-2) to generate natural language descriptions of live camera footage. Built for accessibility, content creation, security monitoring, and research.
 
-## ✨ Features
+```
+Camera Input → AI Processing → "A person waving with a smile in a bright room" 
+```
+
+**Key Highlights:**
+- Real-time processing with ~300-500ms latency
+- 100% local processing (no cloud, no API costs)
+- Voice output for accessibility
+- Records videos with auto-generated captions
+- Customizable prompts on-the-fly
+- Optimized for consumer GPUs (4GB+ VRAM)
+
+---
+
+## Demo
+
+*Video demonstration showing the system in action*
+
+**What it does:**
+- Continuously monitors camera feed
+- Generates natural language descriptions (e.g., "Person typing on keyboard", "Someone waving hello")
+- Speaks descriptions aloud (optional)
+- Records videos with embedded captions
+- Updates descriptions as the scene changes
+- Creates automatic video summaries
+
+## Features
 
 ### Core Capabilities
-- 🎥 **Real-time Processing**: 2-3 descriptions per second with ~300-500ms latency
-- 💬 **Natural Language Output**: Complete sentences describing actions, emotions, and environment
-- 🧠 **Smart Change Detection**: Only processes frames when meaningful changes occur
-- ⚡ **Multi-threaded Architecture**: Separate threads for capture, inference, and display
-- 🚀 **GPU Accelerated**: Optimized for NVIDIA GPUs
-- 📺 **Flexible Display**: Overlay or window mode with live camera feed
-- 🔒 **Local Processing**: Everything runs locally, no cloud dependencies
+- **Real-time Processing**: 2-3 descriptions per second with 300-500ms latency
+- **Natural Language Output**: Complete sentences describing actions, emotions, and environment
+- **Smart Change Detection**: Only processes frames when meaningful changes occur
+- **Multi-threaded Architecture**: Separate threads for capture, inference, and display
+- **GPU Accelerated**: Optimized for NVIDIA GPUs with efficient memory usage
+- **Flexible Display**: Overlay or window mode with live camera feed
+- **Local Processing**: Everything runs locally, no cloud dependencies or API costs
 
-### New Features (v0.2.0)
-- 🔊 **Voice Output (TTS)**: Speak descriptions aloud for accessibility
-- 📹 **Video Recording**: Record videos with embedded captions
-- 📊 **Video Summaries**: Automatic timeline generation after recording
-- ✏️ **Custom Prompts**: Edit prompts on-the-fly in the UI
-- 🔄 **Multiple Models**: Support for Moondream 2 and Florence-2
+### Advanced Features
+- **Voice Output (TTS)**: Speak descriptions aloud for accessibility applications
+- **Video Recording**: Record videos with real-time caption overlay
+- **Video Summaries**: Automatic timeline generation after recording stops
+- **Custom Prompts**: Edit prompts on-the-fly in the UI without code changes
+- **Multiple Models**: Support for Moondream 2 (detailed) and Florence-2 (fast)
 
 ## System Requirements
 
@@ -213,7 +238,7 @@ capture_width: 640
 capture_height: 480
 ```
 
-## 🎮 Controls
+## Keyboard Controls
 
 | Key | Action |
 |-----|--------|
@@ -227,18 +252,26 @@ capture_height: 480
 | `1-4` | Switch prompt templates |
 | `Ctrl+C` | Force quit (terminal) |
 
-## 📦 Standalone Executable
+## Installation Options
 
-### Download Pre-built EXE
-Check [Releases](../../releases) for Windows executable (no installation needed!)
+### Option 1: Standalone Executable (Recommended for Windows)
 
-### Build Your Own
+**Download Pre-built EXE**
+- Check [Releases](../../releases) for the latest Windows executable
+- No Python installation required
+- Extract and run - models download automatically on first use
+
+**Build Your Own**
 ```bash
 python build_exe.py
 ```
-See [EXE_BUILD_GUIDE.md](EXE_BUILD_GUIDE.md) for details.
+See [EXE_BUILD_GUIDE.md](EXE_BUILD_GUIDE.md) for detailed instructions.
 
-## 🤝 Contributing
+### Option 2: Run from Source
+
+See the [Quick Start](#quick-start) section below for installation instructions.
+
+## Contributing
 
 Contributions are welcome! Please check [GITHUB_SETUP.md](GITHUB_SETUP.md) for guidelines.
 
@@ -248,7 +281,7 @@ Contributions are welcome! Please check [GITHUB_SETUP.md](GITHUB_SETUP.md) for g
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📖 Documentation
+## Documentation
 
 - [New Features Guide](docs/new-features-guide.md) - Complete guide to TTS, recording, and custom prompts
 - [Florence-2 Guide](docs/florence-guide.md) - Alternative model for lower-end hardware
@@ -256,40 +289,51 @@ Contributions are welcome! Please check [GITHUB_SETUP.md](GITHUB_SETUP.md) for g
 - [EXE Build Guide](EXE_BUILD_GUIDE.md) - Create standalone executable
 - [GitHub Setup](GITHUB_SETUP.md) - Push to GitHub and create releases
 
-## 🌟 Use Cases
+## Use Cases
 
-- 🦯 **Accessibility**: Real-time scene descriptions for visually impaired
-- 🔒 **Security**: Natural language security monitoring
-- 🎬 **Content Creation**: Auto-generate video captions
-- 👴 **Elderly Care**: Monitor for falls and unusual activity
-- 🏋️ **Fitness**: Analyze exercise form and count reps
-- 🏪 **Retail**: Track customer behavior and engagement
-- 📚 **Education**: Describe experiments and demonstrations
+- **Accessibility**: Real-time scene descriptions for visually impaired users
+- **Security Monitoring**: Natural language descriptions of surveillance footage
+- **Content Creation**: Auto-generate video captions and descriptions
+- **Elderly Care**: Monitor for falls and unusual activity
+- **Fitness Training**: Analyze exercise form and count repetitions
+- **Retail Analytics**: Track customer behavior and engagement patterns
+- **Education**: Describe scientific experiments and demonstrations
+- **Research**: Behavioral analysis and human-computer interaction studies
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - [Moondream 2](https://github.com/vikhyatk/moondream) - Vision-Language Model by vikhyatk
 - [Florence-2](https://huggingface.co/microsoft/Florence-2-large) - Microsoft's Vision Foundation Model
 - [PyTorch](https://pytorch.org/) - Deep learning framework
 - [OpenCV](https://opencv.org/) - Computer vision library
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 📧 Contact & Support
+## Support
 
-- **Issues**: [GitHub Issues](../../issues)
-- **Discussions**: [GitHub Discussions](../../discussions)
+- **Bug Reports**: [GitHub Issues](../../issues)
+- **Feature Requests**: [GitHub Issues](../../issues)
+- **Questions**: [GitHub Discussions](../../discussions)
 - **Documentation**: Check the `docs/` folder
 
-## ⭐ Star History
+## Citation
 
-If you find this project useful, please consider giving it a star!
+If you use this project in your research, please cite:
+
+```bibtex
+@software{llm_rec2025,
+  title={Real-Time Action Recognition System},
+  author={LLM_Rec Contributors},
+  year={2025},
+  url={https://github.com/YOUR-USERNAME/LLM_Rec}
+}
+```
 
 ---
 
-**Made with ❤️ for the open-source community**
+**Star this repository if you find it useful!**
 
 ## Troubleshooting
 
