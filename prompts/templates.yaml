@@ -1,0 +1,27 @@
+# Prompt templates for different use cases
+# Use these by loading them at runtime or switching with keyboard shortcuts
+
+action:
+  name: "Action Focus"
+  prompt: "Describe what the person is doing in one sentence."
+  
+detailed:
+  name: "Detailed Description"
+  prompt: "Describe the person's action, emotion, and environment in one sentence."
+  
+scene:
+  name: "Scene Overview"
+  prompt: "What is happening in this scene? Be concise."
+  
+emotion:
+  name: "Emotion Focus"
+  prompt: "Describe the person's facial expression and emotional state."
+  
+accessibility:
+  name: "Accessibility Description"
+  prompt: "Describe what is visible in detail for someone who cannot see the image."
+  
+objects:
+  name: "Object Detection"
+  prompt: "List the main objects and people visible in this scene."
+

@@ -1,0 +1,98 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+logs/*.log
+*.log
+
+# Model cache (HuggingFace)
+.cache/
+models/
+
+# Recordings (don't commit user recordings)
+recordings/*.mp4
+recordings/*.txt
+# Keep the directory
+!recordings/.gitkeep
+
+# PyInstaller
+*.spec
+build/
+dist/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# PyTorch
+*.pth
+*.pt
+checkpoints/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# OS
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+temp/
+tmp/
+
+# User config (optional - uncomment if you don't want to commit personal configs)
+# config.yaml
+
+# Memory Bank (optional - uncomment if you want to keep it local)
+memory-bank/
+build_exe.py
+logs/*
+EXE_BUILD_GUIDE.md
+GITHUB_SETUP.md
+QUICK_START.md
+docs/florence-guide.md
+docs/hardware-requirements.md
+docs/improvements.md
+docs/new-features-guide.md
+docs/QUANTIZATION_NOTE.md

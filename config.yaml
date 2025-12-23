@@ -1,0 +1,45 @@
+# Real-Time Action Recognition Configuration
+# Edit these settings to customize the system behavior
+
+# Camera settings
+camera_id: 0
+capture_width: 1280
+capture_height: 720
+capture_fps: 30
+buffer_size: 30
+
+# Inference settings
+target_fps: 2.0
+model_name: vikhyatk/moondream2  # Options: vikhyatk/moondream2, microsoft/Florence-2-base, microsoft/Florence-2-large
+model_type: moondream  # Options: moondream, florence
+quantize: false  # Disabled due to dtype compatibility issues
+compile_model: false  # Disabled for stability
+max_tokens: 50
+
+# Change detection (lower threshold = more sensitive)
+change_method: mse  # Options: mse, ssim, hash
+change_threshold: 0.08  # Lower = more sensitive, updates more often
+
+# Display settings
+display_mode: window  # Options: overlay, window
+window_opacity: 1.0   # 1.0 = solid, 0.0 = fully transparent
+show_latency: true
+show_fps: true
+
+# Prompt for description generation
+prompt: "Describe the person's action, emotion, and environment in one sentence."
+
+# Voice Output (TTS)
+tts_enabled: false  # Enable/disable text-to-speech
+tts_rate: 150       # Speech rate (words per minute)
+tts_volume: 0.8     # Volume level (0.0-1.0)
+
+# Video Recording
+recording_fps: 30
+recording_dir: recordings
+
+# Logging
+log_level: INFO
+log_to_file: true
+log_dir: logs
+
